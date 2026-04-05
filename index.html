@@ -306,26 +306,26 @@
                     <p class="text-slate-500 text-sm">初回相談は無料にて承っております。お気軽にご連絡ください。</p>
                 </div>
 
-                <form class="https://formspree.io/f/mojppoor" onsubmit="event.preventDefault(); alert('メッセージが送信されました。担当より折り返しご連絡いたします。');">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <input type="text" placeholder="貴社名" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm">
-                        <input type="text" placeholder="お名前" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm">
-                    </div>
-                    <input type="email" placeholder="メールアドレス" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm">
-                    <select class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm text-slate-400">
-                        <option value="">ご相談項目</option>
-                        <option>内部統制構築・評価</option>
-                        <option>海外子会社管理</option>
-                        <option>外部CFO・財務マネージャー</option>
-                        <option>任意監査・AUP</option>
-                        <option>記帳代行・BPO</option>
-                    </select>
-                    <textarea rows="4" placeholder="具体的なご相談内容" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm"></textarea>
-                    
-                    <div class="text-center pt-8">
-                        <button type="submit" class="bg-slate-900 text-white px-16 py-4 rounded-sm font-bold hover:bg-slate-800 transition shadow-lg">送信内容を確認する</button>
-                    </div>
-                </form>
+                <form action="https://formspree.io/f/mojppoor" method="POST" class="space-y-6">
+    <div class="grid md:grid-cols-2 gap-6">
+        <input type="text" name="company" placeholder="貴社名" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm">
+        <input type="text" name="name" placeholder="お名前" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm" required>
+    </div>
+    <input type="email" name="email" placeholder="メールアドレス" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm" required>
+    <select name="category" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm text-slate-400">
+        <option value="">ご相談項目</option>
+        <option value="内部統制">内部統制構築・評価</option>
+        <option value="海外子会社">海外子会社管理</option>
+        <option value="外部CFO">外部CFO・財務マネージャー</option>
+        <option value="任意監査">任意監査・AUP</option>
+        <option value="記帳代行">記帳代行・BPO</option>
+    </select>
+    <textarea name="message" rows="4" placeholder="具体的なご相談内容" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm" required></textarea>
+    
+    <div class="text-center pt-8">
+        <button type="submit" class="bg-slate-900 text-white px-16 py-4 rounded-sm font-bold hover:bg-slate-800 transition shadow-lg">送信する</button>
+    </div>
+</form>
             </div>
         </div>
     </section>
