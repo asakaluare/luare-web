@@ -72,156 +72,267 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 hero-border-top">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-3/5">
-                    <div class="flex items-center space-x-2 mb-6">
-                        <span class="inline-block px-3 py-1 navy-bg text-white text-xs font-bold tracking-widest">日 / 中 / 英</span>
-                        <span class="text-slate-400 text-xs tracking-widest">TRILINGUAL SUPPORT</span>
+    <section class="min-h-[85vh] flex items-center pt-28 pb-20 hero-border-top relative bg-white overflow-hidden">
+        
+        <!-- Background 1: Urban Nightscape Density (Shanghai/NY vibe) -->
+        <!-- positioned right to form density on the right edge -->
+        <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&q=80&w=2400" class="absolute right-0 top-0 w-full md:w-4/5 h-full object-cover object-right opacity-[0.08] grayscale mix-blend-multiply" alt="Cityscape">
+        
+        <!-- Background 2: Modern Sharp Architectural Edge -->
+        <!-- Uses a polygon clip path to create an architectural diagonal on the right -->
+        <div class="absolute top-0 right-0 w-3/4 md:w-1/2 h-full opacity-[0.12] grayscale mix-blend-multiply origin-bottom-right" style="clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1600" class="absolute inset-0 w-full h-full object-cover object-bottom transform scale-110" alt="Modern Architecture">
+            <!-- Inner white fade to blend the harsh top edge -->
+            <div class="absolute inset-0 bg-gradient-to-b from-white w-full h-32"></div>
+        </div>
+
+        <!-- Gradient protection layer to ensure Left Side Text is crystal clear -->
+        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent z-10 w-[85%] md:w-[65%]"></div>
+        <!-- Top fade to blend perfectly with the white header -->
+        <div class="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-white via-white/80 to-transparent z-10"></div>
+        <div class="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-white to-transparent z-10"></div>
+
+        <!-- The Intellectual Grid Layer, layered on top of the images but below the text -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none z-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30 w-full">
+            <div class="max-w-4xl py-6 md:py-10">
+                <div class="flex flex-col md:flex-row md:items-center gap-5 md:gap-6 mb-10">
+                    <div class="inline-flex items-center bg-white/90 backdrop-blur-sm border border-slate-200 rounded-full py-2.5 px-5 shadow-sm shrink-0 w-max">
+                        <div class="flex space-x-2 mr-4">
+                            <img src="https://flagcdn.com/jp.svg" class="w-7 h-7 rounded-full object-cover border border-slate-50 drop-shadow-[0_4px_10px_rgba(0,0,0,0.12)] transition-transform hover:scale-110" alt="Japan">
+                            <img src="https://flagcdn.com/us.svg" class="w-7 h-7 rounded-full object-cover border border-slate-50 drop-shadow-[0_4px_10px_rgba(0,0,0,0.12)] transition-transform hover:scale-110" alt="English">
+                            <img src="https://flagcdn.com/cn.svg" class="w-7 h-7 rounded-full object-cover border border-slate-50 drop-shadow-[0_4px_10px_rgba(0,0,0,0.12)] transition-transform hover:scale-110" alt="China">
+                        </div>
+                        <span class="text-[13px] font-bold tracking-[0.2em] text-slate-800 pr-1 mt-0.5">TRILINGUAL</span>
                     </div>
-                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6 serif text-slate-900">
-                        言葉の壁を越え、<br>
-                        会計で世界を繋ぐ。
-                    </h1>
-                    <p class="text-lg text-slate-600 mb-10 leading-relaxed border-l-4 border-slate-200 pl-6">
-                        大手事業会社・四大監査法人・外資系投資銀行を経て培った<br class="hidden md:block">
-                        専門性と語学力を武器に、実務に精通した米国公認会計士が<br class="hidden md:block">
-                        貴社のグローバル展開をサポートします。
+                    <span class="text-amber-700 text-xl md:text-2xl font-bold tracking-widest border-l-0 md:border-l-2 border-amber-600 pl-0 md:pl-5 py-1 block">Big4品質を、適正コストで。</span>
+                </div>
+
+                <h1 class="text-[26px] md:text-[44px] lg:text-[52px] xl:text-[58px] font-bold leading-[1.5] md:leading-[1.4] mb-8 serif text-slate-900 tracking-tight">
+                    <span class="inline-block"><span class="font-black tracking-[0.06em] text-slate-800 mr-1.5">貴社の</span>海外子会社の</span><wbr><span class="inline-block pt-1 md:pt-0">管理に、</span><br class="hidden lg:block">
+                    <span class="inline-block pt-1 md:pt-0">確かな統制と安心を。</span>
+                </h1>
+                
+                <div class="pl-5 md:pl-6 mb-10 md:mb-14 relative">
+                    <div class="absolute left-0 top-1 bottom-1 w-0.5 bg-slate-300"></div>
+                    <p class="text-[15px] md:text-[20px] text-slate-600 leading-relaxed font-light">
+                        大手監査法人出身のプロフェッショナルが直接支援する、<br class="hidden sm:block">
+                        クロスボーダー会計・内部統制アドバイザリー
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#contact" class="bg-slate-900 text-white px-10 py-4 rounded-sm font-bold hover:bg-slate-800 transition">無料相談を予約する</a>
-                        
-                    </div>
-                </div>
-                <div class="lg:w-2/5 flex justify-center">
-                    <div class="relative">
-                        <!-- 名刺のアクセントを再現 -->
-                        <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-amber-600/30"></div>
-                        <div class="bg-white p-2 shadow-2xl rounded-sm">
-                            <img src="Photo.png" alt="代表取締役：陸 沿青" class="w-full max-w-sm rounded-sm" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400'">
-                        </div>
-                        <div class="absolute -bottom-6 -right-6 navy-bg text-white p-6 shadow-xl">
-                            <p class="text-xs opacity-70 mb-1">代表取締役</p>
-                            <p class="text-2xl font-bold serif tracking-widest">陸 沿青</p>
-                            <p class="text-[10px] tracking-[0.2em] opacity-80">りく えんせい</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Overview -->
-    <section id="about" class="py-24 bg-slate-50 border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="border-t-2 border-amber-600 pt-8">
-                    <h3 class="text-xl font-bold mb-4 serif">精度の高い業務遂行</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">高い語学力と海外商習慣への理解に加え、専門キャリアで培った高い専門性を活かし、業務を確実に遂行します。</p>
-                </div>
-                <div class="border-t-2 border-slate-900 pt-8">
-                    <h3 class="text-xl font-bold mb-4 serif">「ブラックボックス」の解消</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">現地と本社双方の業務を深く理解した上で現場業務へ踏み込むことで、相互理解の促
-進と組織力向上に貢献します。</p>
-                </div>
-                <div class="border-t-2 border-amber-600 pt-8">
-                    <h3 class="text-xl font-bold mb-4 serif">Big4・投資銀行の実績</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">Big4監査法人、外資系投資銀行でのアドバイザリー経験と、大手日米企業での経理実務を融合したノウハウで課題解決を提供します。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service Cards -->
-    <section id="services" class="py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <p class="text-amber-600 font-bold tracking-widest text-xs uppercase mb-2">Service Lines</p>
-                <h2 class="text-3xl font-bold serif">提供サービス</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="bg-white p-10 border border-slate-100 shadow-sm card-hover relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-16 h-16 bg-slate-50 -mr-8 -mt-8 rotate-45 transition-all group-hover:bg-amber-600"></div>
-                    <h4 class="text-lg font-bold mb-6 navy-text border-b border-slate-100 pb-4">内部統制構築・評価</h4>
-                    <ul class="text-sm text-slate-600 space-y-4">
-                    </ul>
                 </div>
 
-                <div class="bg-white p-10 border border-slate-100 shadow-sm card-hover relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-16 h-16 bg-slate-50 -mr-8 -mt-8 rotate-45 transition-all group-hover:bg-slate-900"></div>
-                    <h4 class="text-lg font-bold mb-6 navy-text border-b border-slate-100 pb-4">海外子会社管理支援</h4>
-                    <ul class="text-sm text-slate-600 space-y-4">
-                    </ul>
-                </div>
-
-                <div class="bg-white p-10 border border-slate-100 shadow-sm card-hover relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-16 h-16 bg-slate-50 -mr-8 -mt-8 rotate-45 transition-all group-hover:bg-amber-600"></div>
-                    <h4 class="text-lg font-bold mb-6 navy-text border-b border-slate-100 pb-4">CFO・コントローラー代行</h4>
-                    <ul class="text-sm text-slate-600 space-y-4">
-                    </ul>
-                </div>
-
-                <div class="bg-white p-10 border border-slate-100 shadow-sm card-hover relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-16 h-16 bg-slate-50 -mr-8 -mt-8 rotate-45 transition-all group-hover:bg-slate-900"></div>
-                    <h4 class="text-lg font-bold mb-6 navy-text border-b border-slate-100 pb-4">M&A支援</h4>
-                    <ul class="text-sm text-slate-600 space-y-4">
-                    </ul>
-                </div>
-
-                <div class="bg-white p-10 border border-slate-100 shadow-sm card-hover relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-16 h-16 bg-slate-50 -mr-8 -mt-8 rotate-45 transition-all group-hover:bg-amber-600"></div>
-                    <h4 class="text-lg font-bold mb-6 navy-text border-b border-slate-100 pb-4">記帳代行・BPO</h4>
-                    <ul class="text-sm text-slate-600 space-y-4">
-                    </ul>
-                </div>
-
-                <div class="navy-bg p-10 shadow-sm card-hover flex flex-col justify-center items-center text-center">
-                    <p class="text-white font-bold mb-4">複雑な課題への挑戦</p>
-                    <p class="text-slate-400 text-xs mb-8">複数の国を跨ぐ高度な案件も、パートナーが直接担当し迅速に対応いたします。</p>
-                    <a href="#contact" class="text-amber-500 font-bold text-sm border-b-2 border-amber-500">ご相談はこちら</a>
+                <div class="flex flex-col sm:flex-row flex-wrap gap-4 mt-6 md:mt-4">
+                    <a href="#contact" class="navy-bg text-white px-8 md:px-10 py-4 md:py-4 rounded-sm font-medium hover:opacity-90 transition shadow-lg shadow-slate-900/10 text-[14px] md:text-sm tracking-wide text-center">
+                        ご相談・お問い合わせ
+                    </a>
+                    <a href="#services" class="bg-white/80 backdrop-blur-sm text-slate-700 border border-slate-200 px-8 md:px-10 py-4 md:py-4 rounded-sm font-medium hover:bg-slate-50 transition text-[14px] md:text-sm tracking-wide shadow-sm text-center">
+                        提供サービスを見る
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Profile Section -->
-    <section id="profile" class="py-24 bg-white border-y border-slate-100">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="md:flex gap-16 items-start">
-                <div class="md:w-1/3 mb-12 md:mb-0">
-                    <div class="relative p-1 border border-slate-200">
-                        <img src="Photo.png" alt="陸 沿青" class="w-full grayscale hover:grayscale-0 transition-all duration-700" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400'">
+    <!-- Profile Section -->
+    <section id="profile" class="pt-24 md:pt-32 pb-32 bg-white relative z-20">
+        <div class="max-w-5xl mx-auto px-5 md:px-6 lg:px-8">
+            <div class="md:flex gap-16 items-center">
+                <div class="w-[75%] sm:w-[50%] mx-auto md:w-1/3 mb-10 md:mb-0 md:mx-0 shrink-0">
+                    <div class="relative p-2 bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border border-slate-100 rounded-sm">
+                        <img src="Photo.png" alt="陸 沿青 - US.CPA" class="w-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-700" style="aspect-ratio: 3/4;" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400'">
                     </div>
                 </div>
-                <div class="md:w-2/3">
-                    <p class="text-amber-600 font-bold text-xs tracking-widest mb-2 uppercase">Representative Profile</p>
-                    <h2 class="text-3xl font-bold serif mb-2">陸 沿青 <span class="text-lg font-normal ml-4 text-slate-500 serif">Yanqing Lu, US.CPA</span></h2>
-                    <div class="h-1 w-20 navy-bg mb-8"></div>
+                <div class="md:w-2/3 md:py-4">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-6 h-px bg-amber-600"></div>
+                        <p class="text-amber-600 font-bold text-[10px] tracking-[0.2em] uppercase">Representative</p>
+                    </div>
                     
-                    <div class="space-y-6 text-sm text-slate-600 leading-relaxed">
-                        <p>
-                            オーストラリアの大学を卒業後、日系上場専門商社及び米国系製造大手の日本法人にて経理実務を経験し、あずさ監査法人にて会計アドバイザリーとして従事。その後、三菱UFJモルガン・スタンレー証券の投資銀行部門、米国系ベンチャー会計事務所を経験後に独立。
+                    <div class="mb-10">
+                        <p class="text-[14px] sm:text-[15px] font-bold serif text-slate-500 mb-2 tracking-wide">代表取締役 / Managing Partner</p>
+                        <h2 class="text-3xl md:text-4xl font-bold serif text-slate-900 flex flex-col lg:flex-row lg:items-end">
+                            <div class="flex items-baseline">
+                                <span class="tracking-[0.15em]">陸 沿青</span>
+                                <span class="text-sm md:text-[15px] font-medium text-slate-400 ml-4 tracking-[0.2em] font-sans">りく えんせい</span>
+                            </div>
+                            <span class="text-slate-300 font-light mx-4 hidden lg:block mb-1">|</span>
+                            <span class="text-[11px] sm:text-[12px] font-bold tracking-[0.3em] text-slate-500 font-sans mt-3 lg:mt-0 lg:mb-[3px] uppercase">Yanqing Lu, US.CPA</span>
+                        </h2>
+                    </div>
+                    
+                    <div class="text-[15px] text-slate-600 leading-[2.2] tracking-wide font-light">
+                        <p class="w-full xl:w-[94%]">
+                            オーストラリアの大学を卒業後、<br class="hidden md:block">
+                            日系上場専門商社及び米国系製造大手の日本法人にて経理実務を経験し、<br class="hidden md:block">
+                            あずさ監査法人にて会計アドバイザリーとして従事。<br class="hidden md:block">
+                            その後、三菱UFJモルガン・スタンレー証券の投資銀行部門、<br class="hidden md:block">
+                            米国系ベンチャー会計事務所を経験後に独立。
                         </p>
-                        <p>
-                                             
-                        <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-50">
+                        
+                        <div class="bg-slate-50 border-l-[3px] border-slate-900 p-6 md:p-10 my-10 md:my-14 shadow-sm relative">
+                            <p class="text-[14px] md:text-base text-slate-800 leading-[2.6] tracking-wide font-medium">
+                                すべてのプロジェクトにおいて、Big4出身の代表が実務の全工程を<span class="font-black text-slate-950 border-b-2 border-amber-600 pb-1 px-1">直接統括</span>し、高い<span class="font-black text-slate-950 border-b-2 border-amber-600 pb-1 px-1">品質を担保</span>します。<br class="hidden xl:block">
+                                経験の浅いスタッフに実務を委ねる『丸投げ』は一切いたしません。
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-6 pt-10 mt-12 md:mt-16 border-t border-slate-200">
                             <div>
-                                <h5 class="font-bold text-slate-900 mb-2">学歴</h5>
-                                <ul class="text-xs space-y-1">
-                                    <li>・南オーストラリア大学 経営学部卒業</li>
+                                <h5 class="font-bold text-slate-900 text-[11px] tracking-[0.1em] mb-4">学歴</h5>
+                                <ul class="text-xs space-y-2 text-slate-500 leading-loose">
+                                    <li>・南オーストラリア大学 経営学部卒</li>
                                 </ul>
                             </div>
                             <div>
-                                <h5 class="font-bold text-slate-900 mb-2">保有資格</h5>
-                                <ul class="text-xs space-y-1">
+                                <h5 class="font-bold text-slate-900 text-[11px] tracking-[0.1em] mb-4">保有資格</h5>
+                                <ul class="text-xs space-y-2 text-slate-500 leading-loose">
                                     <li>・米国公認会計士 (US.CPA)</li>
-                                    </ul>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Services Section -->
+    <section id="services" class="py-24 md:py-32 bg-slate-50 relative overflow-hidden border-y border-slate-200">
+        <!-- Background Grid Decoration -->
+        <div class="absolute inset-0 z-0 pointer-events-none opacity-5">
+            <svg class="w-full h-full" width="100%" height="100%">
+                <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#000000" stroke-width="1"/>
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#grid-pattern)"></rect>
+            </svg>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-5 md:px-6 lg:px-8 relative z-10">
+            
+            <!-- 1-1. Empathy Section -->
+            <div class="text-center mb-20 md:mb-32">
+                <p class="text-amber-600 font-bold tracking-[0.2em] text-[10px] uppercase mb-4">Issues</p>
+                <h2 class="text-[22px] sm:text-2xl md:text-[28px] font-bold serif mb-10 md:mb-12 text-slate-900 tracking-tight leading-relaxed">海外拠点のガバナンスに、<br class="block sm:hidden">このような課題はありませんか？</h2>
+                
+                <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 shadow-sm border border-slate-100 rounded-sm">
+                    <ul class="space-y-6 md:space-y-8 text-left">
+                        <li class="flex items-start">
+                            <span class="text-amber-600 font-bold mr-4 shrink-0 mt-0.5 text-lg">✓</span>
+                            <span class="text-[14px] md:text-[15px] xl:text-base text-slate-800 leading-relaxed font-bold tracking-wide">海外拠点の会計実態がブラックボックス化している</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 font-bold mr-4 shrink-0 mt-0.5 text-lg">✓</span>
+                            <span class="text-[14px] md:text-[15px] xl:text-base text-slate-800 leading-relaxed font-bold tracking-wide">現地事務所とのコミュニケーションが円滑に進まない</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 font-bold mr-4 shrink-0 mt-0.5 text-lg">✓</span>
+                            <span class="text-[14px] md:text-[15px] xl:text-base text-slate-800 leading-relaxed font-bold tracking-wide">大規模ファームでは柔軟な対応が難しい、細やかなニーズへの即応性をお探しではありませんか？</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 1-2. Solutions (Cards) -->
+            <div class="mb-24 md:mb-32">
+                <div class="text-center mb-16">
+                    <p class="text-amber-600 font-bold tracking-[0.2em] text-[10px] uppercase mb-4">Solutions</p>
+                    <h2 class="text-[22px] sm:text-2xl md:text-[28px] font-bold serif mb-6 text-slate-900 tracking-tight leading-loose md:leading-normal">貴社の『グローバル経理部』として、<br class="hidden md:block">プロフェッショナルが直接支援します</h2>
+                </div>
+                
+                <div class="grid lg:grid-cols-3 gap-8 md:gap-10 relative z-10">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-8 lg:p-10 border-t-[3px] border-amber-600 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <span class="text-slate-200 font-serif text-5xl font-bold opacity-30 block mb-6">01</span>
+                        <h4 class="text-[17px] md:text-lg font-bold mb-5 text-slate-900 leading-[1.6] border-b border-slate-100 pb-4">海外子会社管理・<wbr>モニタリング</h4>
+                        <p class="text-[13px] md:text-[14px] text-slate-600 leading-[2] tracking-wide font-medium">現地試算表のレビューから異常検知、レポーティングまで。</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white p-8 lg:p-10 border-t-[3px] border-slate-900 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <span class="text-slate-200 font-serif text-5xl font-bold opacity-30 block mb-6">02</span>
+                        <h4 class="text-[17px] md:text-lg font-bold mb-5 text-slate-900 leading-[1.6] border-b border-slate-100 pb-4">内部統制（J-SOX）<wbr>構築支援</h4>
+                        <p class="text-[13px] md:text-[14px] text-slate-600 leading-[2] tracking-wide font-medium">大手監査法人対応を見据えた、無駄のない効率的な統制設計。</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white p-8 lg:p-10 border-t-[3px] border-amber-600 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                        <span class="text-slate-200 font-serif text-5xl font-bold opacity-30 block mb-6">03</span>
+                        <h4 class="text-[17px] md:text-lg font-bold mb-5 text-slate-900 leading-[1.6] border-b border-slate-100 pb-4">クロスボーダー<wbr>記帳代行・決算支援</h4>
+                        <p class="text-[13px] md:text-[14px] text-slate-600 leading-[2] tracking-wide font-medium">日英中対応。日本本社への報告パッケージ作成をトータルサポート。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1-3. Trust / Comparison Table -->
+            <div class="mb-16">
+                <div class="text-center mb-12">
+                    <p class="text-amber-600 font-bold tracking-[0.2em] text-[10px] uppercase mb-4">Advantage</p>
+                    <h2 class="text-[22px] sm:text-2xl md:text-[28px] font-bold serif text-slate-900 tracking-tight leading-relaxed">なぜ、高品質でありながら<wbr>柔軟で迅速なのか？</h2>
+                </div>
+
+                <div class="max-w-4xl mx-auto overflow-x-auto pb-4">
+                    <table class="w-full text-left border-collapse min-w-[500px] md:min-w-[600px]">
+                        <thead>
+                            <tr>
+                                <th class="p-4 md:p-6 border-b-2 border-slate-200 w-1/4"></th>
+                                <th class="p-4 md:p-6 border-b-2 border-slate-200 text-slate-400 font-bold text-center w-[37.5%] text-[13px] md:text-sm">一般的な<br class="sm:hidden">大手監査法人</th>
+                                <th class="p-4 md:p-6 border-b-[3px] border-amber-600 bg-white text-slate-900 font-bold text-center text-[15px] sm:text-lg w-[37.5%] shadow-[0_-4px_10px_-5px_rgba(0,0,0,0.05)] border-x border-slate-50 relative">
+                                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-amber-600 text-white text-[10px] font-bold tracking-[0.15em] px-3 py-1 rounded-sm shadow-sm hidden sm:block whitespace-nowrap">OUR STRENGTH</div>
+                                    Luare Consulting
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-slate-200">
+                                <td class="p-4 md:p-6 font-bold text-slate-800 tracking-wide text-[13px] md:text-[15px]">コスト</td>
+                                <td class="p-4 md:p-6 text-slate-500 text-center text-[14px] md:text-[15px]">組織維持費含む高価格</td>
+                                <td class="p-4 md:p-6 bg-white font-bold text-amber-700 text-center text-[15px] md:text-[16px] shadow-[0_4px_15px_-5px_rgba(0,0,0,0.05)] border-x border-slate-50">実務に特化した適正価格</td>
+                            </tr>
+                            <tr class="border-b border-slate-200">
+                                <td class="p-4 md:p-6 font-bold text-slate-800 tracking-wide text-[13px] md:text-[15px]">体制</td>
+                                <td class="p-4 md:p-6 text-slate-500 text-center text-[14px] md:text-[15px] leading-relaxed">多数のスタッフによる<br class="hidden sm:block">分業制</td>
+                                <td class="p-4 md:p-6 bg-white font-bold text-slate-900 text-center text-[14px] md:text-[15px] leading-relaxed shadow-[0_4px_15px_-5px_rgba(0,0,0,0.05)] border-x border-slate-50">Big4出身の代表による<br class="hidden sm:block">直接対応</td>
+                            </tr>
+                            <tr class="border-b border-amber-600/30">
+                                <td class="p-4 md:p-6 font-bold text-slate-800 tracking-wide text-[13px] md:text-[15px]">スピード</td>
+                                <td class="p-4 md:p-6 text-slate-500 text-center text-[14px] md:text-[15px] leading-relaxed">内部承認重視</td>
+                                <td class="p-4 md:p-6 bg-white font-bold text-slate-900 text-center text-[14px] md:text-[15px] shadow-[0_10px_20px_-5px_rgba(0,0,0,0.05)] border-x border-slate-50 leading-relaxed">経営判断に即した<br class="hidden sm:block">迅速なレスポンス</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 1-4. Pricing Logic -->
+            <div class="max-w-3xl mx-auto mt-12 bg-white/60 backdrop-blur-sm p-8 md:p-10 border-l-[3px] border-slate-300">
+                <p class="text-[14px] md:text-[15px] text-slate-700 leading-[2.2] tracking-wide font-medium">
+                    少数精鋭の運営体制により、中間コストを抑え、専門家の知見を直接お届けする仕組みを整えています。<br class="hidden xl:block">
+                    お客様のコストを、専門家の『<b>実務時間</b>』のみに集中させることで、<br class="hidden xl:block">
+                    Big4品質と適正価格を両立しています。
+                </p>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- 3. CTA Banner Section -->
+    <section class="bg-slate-900 py-24 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-amber-600 opacity-20 -ml-32 -mt-32 rotate-45 pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-48 h-48 bg-slate-700 opacity-20 -mr-24 -mb-24 rotate-45 pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto px-5 md:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-10 lg:mb-12 leading-[1.8] tracking-widest serif">
+                貴社の海外拠点の状況をお伺いし、<br class="hidden md:block">
+                最適な管理体制をご提案します。
+            </h2>
+            <div class="mt-8">
+                <a href="#contact" class="inline-block bg-amber-600 text-white font-bold text-[14px] md:text-base tracking-widest py-5 px-8 md:px-12 rounded-sm shadow-[0_10px_20px_-10px_rgba(217,119,6,0.8)] hover:-translate-y-1 hover:shadow-[0_15px_30px_-10px_rgba(217,119,6,0.9)] hover:bg-amber-500 transition-all duration-300 relative group">
+                    初回オンライン無料相談（30分）を予約する
+                    <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition duration-300 rounded-sm"></div>
+                </a>
             </div>
         </div>
     </section>
