@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luare Consulting | Cross-Border Accounting Advisory</title>
+    <meta name="description" content="Luare Consulting is a professional accounting firm led by former Big 4 partners, delivering high-quality, cost-effective advisory services for global subsidiary management, internal controls (J-SOX), and cross-border bookkeeping.">
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="ja" href="https://luare-consulting.com/" />
+    <link rel="alternate" hreflang="en" href="https://luare-consulting.com/en/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://luare-consulting.com/zh/" />
+    <link rel="alternate" hreflang="x-default" href="https://luare-consulting.com/" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        amber: {
+                            500: '#c5a059',
+                            600: '#b48b3b',
+                            700: '#9b7300',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1a2b48;
+            --gold: #b48b3b;
+            --gold-light: #d4af37;
+        }
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .serif {
+            font-family: 'Inter', 'Noto Serif JP', serif;
+        }
+        /* Background Pattern */
+        .bg-pattern {
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%27e5e7eb' fill-opacity='0.3'%3E%3Cpath d='M0 0h80v80H0z'/%3E%3Cpath d='M40 0L0 40h80L40 0zM0 80l40-40 40 40H0z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        .hero-border-top {
+            border-top: 8px solid var(--gold);
+            position: relative;
+        }
+        .hero-border-top::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 0;
+            width: 30%;
+            border-top: 8px solid var(--navy);
+            z-index: 10;
+        }
+        .gold-gradient {
+            background: linear-gradient(to right, var(--gold), var(--gold-light));
+        }
+        .navy-text { color: var(--navy); }
+        .gold-text { color: var(--gold); }
+        .navy-bg { background-color: var(--navy); }
+        .gold-bg { background-color: var(--gold); }
+    </style>
+</head>
+<body class="bg-pattern text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 navy-bg flex items-center justify-center rounded-sm">
+                        <span class="text-white font-bold text-xl serif italic">L</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-slate-800 serif">Luare Consulting</span>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                    <div class="flex items-center space-x-6 mr-2">
+                        <a href="#profile" class="hover:text-amber-700 transition">Profile</a>
+                        <a href="#services" class="hover:text-amber-700 transition">Services</a>
+                        <a href="#advantage" class="hover:text-amber-700 transition">Strengths</a>
+                    </div>
+                    
+                    <!-- Language Switcher (EN Active) -->
+                    <div class="flex items-center space-x-3 text-[13px] font-medium tracking-widest px-6 ml-2 border-l border-slate-200 uppercase">
+                        <a href="/" class="text-slate-400 hover:text-amber-600 transition-colors duration-300 pb-1">JP</a>
+                        <span class="text-slate-300 px-0.5">/</span>
+                        <span class="text-amber-600 border-b-2 border-amber-600 pb-1">EN</span>
+                        <span class="text-slate-300 px-0.5">/</span>
+                        <a href="/zh/" class="text-slate-400 hover:text-amber-600 transition-colors duration-300 pb-1">CN</a>
+                    </div>
+                    
+                    <a href="#contact" class="gold-bg text-white px-6 py-2.5 rounded-sm hover:opacity-90 transition shadow-[0_4px_10px_-5px_rgba(180,139,59,0.8)]">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-[85vh] flex items-center pt-28 pb-20 hero-border-top relative bg-white overflow-hidden">
+        
+        <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&q=80&w=2400" class="absolute right-0 top-0 w-full md:w-4/5 h-full object-cover object-right opacity-[0.08] grayscale mix-blend-multiply" alt="Cityscape">
+        
+        <div class="absolute top-0 right-0 w-3/4 md:w-1/2 h-full opacity-[0.12] grayscale mix-blend-multiply origin-bottom-right" style="clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1600" class="absolute inset-0 w-full h-full object-cover object-bottom transform scale-110" alt="Modern Architecture">
+            <div class="absolute inset-0 bg-gradient-to-b from-white w-full h-32"></div>
+        </div>
+
+        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent z-10 w-[85%] md:w-[65%]"></div>
+        <div class="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-white via-white/80 to-transparent z-10"></div>
+        <div class="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-white to-transparent z-10"></div>
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none z-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30 w-full">
+            <div class="max-w-4xl py-6 md:py-10">
+                <div class="flex flex-col md:flex-row md:items-center gap-5 md:gap-6 mb-10">
+                    <div class="inline-flex items-center bg-white/90 backdrop-blur-sm border border-slate-200 rounded-full py-2.5 px-5 shadow-sm shrink-0 w-max">
+                        <div class="flex space-x-2 mr-4">
+                            <img src="https://flagcdn.com/jp.svg" class="w-7 h-7 rounded-full object-cover border border-slate-50 drop-shadow-[0_4px_10px_rgba(0,0,0,0.12)] transition-transform hover:scale-110" alt="Japan">
+                            <img src="https://flagcdn.com/us.svg" class="w-7 h-7 rounded-full object-cover border border-slate-50 drop-shadow-[0_4px_10px_rgba(0,0,0,0.12)] transition-transform hover:scale-110" alt="English">
+                            <img src="https://flagcdn.com/cn.svg" class="w-7 h-7 rounded-full object-cover border border-slate-50 drop-shadow-[0_4px_10px_rgba(0,0,0,0.12)] transition-transform hover:scale-110" alt="China">
+                        </div>
+                        <span class="text-[13px] font-bold tracking-[0.2em] text-slate-800 pr-1 mt-0.5">TRILINGUAL</span>
+                    </div>
+                    <span class="text-amber-700 text-lg md:text-xl font-bold tracking-widest border-l-0 md:border-l-2 border-amber-600 pl-0 md:pl-5 py-1 block uppercase">Big 4 Quality at a Rational Cost</span>
+                </div>
+
+                <h1 class="text-[32px] md:text-[48px] lg:text-[56px] xl:text-[62px] font-black leading-[1.2] md:leading-[1.1] mb-8 serif text-slate-900 tracking-tight">
+                    Robust Governance &<br>
+                    Assurance for Your<br>
+                    Global Subsidiaries.
+                </h1>
+                
+                <div class="pl-5 md:pl-6 mb-10 md:mb-14 relative">
+                    <div class="absolute left-0 top-1 bottom-1 w-0.5 bg-slate-300"></div>
+                    <p class="text-[16px] md:text-[20px] text-slate-600 leading-relaxed font-light">
+                        Cross-border accounting and internal control advisory<br class="hidden sm:block">
+                        directly spearheaded by a former Big 4 professional.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row flex-wrap gap-4 mt-6 md:mt-4">
+                    <a href="#contact" class="navy-bg text-white px-8 md:px-10 py-4 md:py-4 rounded-sm font-medium hover:opacity-90 transition shadow-lg shadow-slate-900/10 text-[14px] md:text-sm tracking-wide text-center">
+                        Request a Consultation
+                    </a>
+                    <a href="#services" class="bg-white/80 backdrop-blur-sm text-slate-700 border border-slate-200 px-8 md:px-10 py-4 md:py-4 rounded-sm font-medium hover:bg-slate-50 transition text-[14px] md:text-sm tracking-wide shadow-sm text-center">
+                        View Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="pt-24 md:pt-32 pb-32 bg-white relative z-20">
+        <div class="max-w-5xl mx-auto px-5 md:px-6 lg:px-8">
+            <div class="md:flex gap-16 items-center">
+                <div class="w-[75%] sm:w-[50%] mx-auto md:w-1/3 mb-10 md:mb-0 md:mx-0 shrink-0">
+                    <div class="relative p-2 bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border border-slate-100 rounded-sm">
+                        <!-- Relative path corrected for subfolder -->
+                        <img src="../Photo.png" alt="Yanqing Lu - US.CPA" class="w-full object-cover" style="aspect-ratio: 3/4; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400'">
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:py-4">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-6 h-px bg-amber-600"></div>
+                        <p class="text-amber-600 font-bold text-[10px] tracking-[0.2em] uppercase">Representative</p>
+                    </div>
+                    
+                    <div class="mb-10">
+                        <p class="text-[14px] sm:text-[15px] font-bold font-serif text-slate-900 mb-4 tracking-wide">Managing Partner</p>
+                        
+                        <div class="flex flex-col md:flex-row md:items-center">
+                            <!-- Name Block -->
+                            <div class="flex items-center">
+                                <!-- Left side (Kanji) -->
+                                <span class="text-[32px] md:text-[40px] font-bold font-serif text-slate-900 tracking-[0.1em] leading-none pb-1">陸 沿青</span>
+                                
+                                <!-- Right side (2 rows) -->
+                                <div class="flex flex-col ml-5 justify-center gap-1.5">
+                                    <span class="text-[14px] md:text-[16px] font-bold text-slate-500 tracking-[0.25em] uppercase font-sans leading-none">Yanqing Lu</span>
+                                    <span class="text-[13px] md:text-[15px] font-medium text-slate-500 tracking-[0.15em] font-sans leading-none">りく えんせい</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Qualification Separator -->
+                            <div class="hidden md:block w-px h-16 bg-amber-600/30 mx-8 lg:mx-10"></div>
+                            <div class="md:hidden w-16 h-px bg-amber-600/30 my-6"></div>
+                            
+                            <!-- Qualification Block -->
+                            <div class="flex flex-col justify-center">
+                                <span class="text-[16px] md:text-[18px] font-bold tracking-[0.2em] text-amber-600 font-serif uppercase">
+                                    US.CPA
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-[15px] text-slate-600 leading-[2.2] tracking-wide font-light">
+                        <p class="w-full xl:w-[94%]">
+                            After obtaining a Bachelor of Business degree in Australia,<br class="hidden md:block">
+                            Yanqing built his expertise in corporate accounting at the Japanese subsidiary of a US manufacturing giant and a listed Japanese trading firm.<br class="hidden md:block">
+                            He then served as an accounting advisor at KPMG AZSA LLC,<br class="hidden md:block">
+                            followed by roles in the investment banking division at Mitsubishi UFJ Morgan Stanley Securities<br class="hidden md:block">
+                            and a US venture accounting firm before founding Luare Consulting.
+                        </p>
+                        
+                        <div class="bg-slate-50 border-l-[3px] border-slate-900 p-6 md:p-8 my-10 md:my-12 shadow-sm relative flex items-center">
+                            <p class="text-[14px] md:text-[15px] text-slate-800 leading-[2.2] tracking-wide font-medium w-full">
+                                For every project, our Big 4-experienced partner <span class="font-black text-slate-950 underline decoration-amber-600 decoration-[3px] underline-offset-[5px]">directly oversees</span> the entire workflow to guarantee uncompromising <span class="font-black text-slate-950 underline decoration-amber-600 decoration-[3px] underline-offset-[5px]">quality</span>.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 pt-10 mt-12 md:mt-16 border-t border-slate-200">
+                            <div>
+                                <h5 class="font-bold text-slate-900 text-[13px] md:text-[14px] tracking-[0.1em] mb-4 uppercase">Education</h5>
+                                <ul class="text-[14px] md:text-[15px] space-y-3 text-slate-800 leading-relaxed font-medium">
+                                    <li class="flex items-start"><span class="mr-3 text-amber-600 font-black">•</span><span>University of South Australia, Business School</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-slate-900 text-[13px] md:text-[14px] tracking-[0.1em] mb-4 uppercase">Qualifications</h5>
+                                <ul class="text-[14px] md:text-[15px] space-y-3 text-slate-800 leading-relaxed font-medium">
+                                    <li class="flex items-start"><span class="mr-3 text-amber-600 font-black">•</span><span>US Certified Public Accountant (US.CPA)</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Services Section -->
+    <section id="services" class="py-24 md:py-32 bg-slate-50 relative overflow-hidden border-y border-slate-200">
+        <div class="absolute inset-0 z-0 pointer-events-none opacity-5">
+            <svg class="w-full h-full" width="100%" height="100%">
+                <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#000000" stroke-width="1"/>
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#grid-pattern)"></rect>
+            </svg>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-5 md:px-6 lg:px-8 relative z-10">
+            
+            <!-- Empathy Section -->
+            <div class="text-center mb-20 md:mb-32">
+                <p class="text-amber-600 font-bold tracking-[0.2em] text-[10px] uppercase mb-4">Issues</p>
+                <h2 class="text-[22px] sm:text-2xl md:text-[28px] font-bold serif mb-10 md:mb-12 text-slate-900 tracking-tight leading-relaxed">Are you facing these challenges in your<br class="block sm:hidden">global subsidiary governance?</h2>
+                
+                <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 shadow-sm border border-slate-100 rounded-sm">
+                    <ul class="space-y-6 md:space-y-8 text-left">
+                        <li class="flex items-start">
+                            <span class="text-amber-600 font-bold mr-6 shrink-0 mt-0.5 text-lg">✓</span>
+                            <span class="text-[14px] md:text-[15px] xl:text-base text-slate-800 leading-relaxed font-bold tracking-wide">The actual state of accounting operations at overseas branches has become a "black box."</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 font-bold mr-6 shrink-0 mt-0.5 text-lg">✓</span>
+                            <span class="text-[14px] md:text-[15px] xl:text-base text-slate-800 leading-relaxed font-bold tracking-wide">Communication with local subsidiaries is difficult and inefficient.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-600 font-bold mr-6 shrink-0 mt-0.5 text-lg">✓</span>
+                            <span class="text-[14px] md:text-[15px] xl:text-base text-slate-800 leading-relaxed font-bold tracking-wide">Major firms lack the agility and customized<br class="hidden md:block">response you urgently need.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Solutions (Cards) -->
+            <div class="mb-24 md:mb-32">
+                <div class="text-center mb-16">
+                    <p class="text-amber-600 font-bold tracking-[0.2em] text-[10px] uppercase mb-4">Solutions</p>
+                    <h2 class="text-[22px] sm:text-2xl md:text-[28px] font-bold serif mb-6 text-slate-900 tracking-tight leading-loose md:leading-normal">We act as your 'Global Accounting Department',<br class="hidden md:block">providing direct professional support.</h2>
+                </div>
+                
+                <div class="grid lg:grid-cols-3 gap-8 md:gap-10 relative z-10">
+                    <div class="bg-white p-8 lg:p-10 border-t-[3px] border-amber-600 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                        <span class="text-slate-300 font-serif text-5xl font-bold opacity-40 block mb-6">01</span>
+                        <h4 class="text-lg md:text-[19px] font-bold mb-6 text-slate-900 leading-[1.7] border-b border-slate-100 pb-5">Internal Control<br>(J-SOX) Advisory</h4>
+                        <p class="text-[14px] md:text-[15px] text-slate-600 leading-[1.8] tracking-wide font-medium">Designing lean, high-precision controls<br>tailored for compliance with major audit firms.</p>
+                    </div>
+                    <div class="bg-white p-8 lg:p-10 border-t-[3px] border-slate-900 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                        <span class="text-slate-300 font-serif text-5xl font-bold opacity-40 block mb-6">02</span>
+                        <h4 class="text-lg md:text-[19px] font-bold mb-6 text-slate-900 leading-[1.7] border-b border-slate-100 pb-5">Operations Visualization<br>& Reporting</h4>
+                        <p class="text-[14px] md:text-[15px] text-slate-600 leading-[1.8] tracking-wide font-medium">Assisting the Japanese HQ in visualizing local operations<br>and enhancing overall group organizational strength.</p>
+                    </div>
+                    <div class="bg-white p-8 lg:p-10 border-t-[3px] border-amber-600 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                        <span class="text-slate-300 font-serif text-5xl font-bold opacity-40 block mb-6">03</span>
+                        <h4 class="text-lg md:text-[19px] font-bold mb-6 text-slate-900 leading-[1.7] border-b border-slate-100 pb-5">Global Talent<br>Development</h4>
+                        <p class="text-[14px] md:text-[15px] text-slate-600 leading-[1.8] tracking-wide font-medium">Empowering overseas subsidiary employees by elevating their<br>internal control and core financial accounting capabilities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust / Comparison Table -->
+            <div id="advantage" class="mb-16 scroll-mt-24">
+                <div class="text-center mb-12">
+                    <p class="text-amber-600 font-bold tracking-[0.2em] text-[10px] uppercase mb-4">Advantage</p>
+                    <h2 class="text-[26px] sm:text-[30px] md:text-[36px] font-bold serif text-slate-900 tracking-wide leading-relaxed">Big 4 Quality, Boutique Agility.</h2>
+                </div>
+
+                <div class="max-w-4xl mx-auto overflow-x-auto pt-5 pb-4 -mt-5">
+                    <table class="w-full text-left border-collapse min-w-[500px] md:min-w-[600px]">
+                        <thead>
+                            <tr>
+                                <th class="p-4 md:p-6 border-b-2 border-slate-200 w-1/4"></th>
+                                <th class="p-4 md:p-6 border-b-2 border-slate-200 text-slate-400 font-bold text-center w-[37.5%] text-[13px] md:text-sm align-middle">Major Accounting Firms</th>
+                                <th class="px-4 py-6 md:px-6 md:py-8 border-b-[3px] border-amber-600 bg-white text-slate-900 font-medium text-center text-[15px] sm:text-lg w-[37.5%] shadow-[0_-4px_10px_-5px_rgba(0,0,0,0.05)] border-x border-slate-50 relative align-middle">
+                                    <div class="absolute -top-[15px] left-1/2 transform -translate-x-1/2 bg-amber-600 text-white text-xs font-bold tracking-[0.15em] pt-[8px] pb-[6px] pl-[18px] pr-4 rounded-sm shadow-md hidden sm:block whitespace-nowrap z-10">OUR STRENGTH</div>
+                                    <span class="block mt-1">Luare Consulting</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-slate-200">
+                                <td class="p-4 md:p-6 font-bold text-slate-800 tracking-wide text-[13px] md:text-[15px] align-middle">Cost Structure</td>
+                                <td class="p-4 md:p-6 text-slate-500 text-center text-[14px] md:text-[15px] align-middle">High overhead pricing</td>
+                                <td class="p-4 md:p-6 bg-white font-bold text-amber-700 text-center text-[15px] md:text-[16px] shadow-[0_4px_15px_-5px_rgba(0,0,0,0.05)] border-x border-slate-50 align-middle">Rational pricing focused on core execution</td>
+                            </tr>
+                            <tr class="border-b border-slate-200">
+                                <td class="p-4 md:p-6 font-bold text-slate-800 tracking-wide text-[13px] md:text-[15px] align-middle">Team Assembly</td>
+                                <td class="p-4 md:p-6 text-slate-500 text-center text-[14px] md:text-[15px] leading-relaxed align-middle">Hierarchical delegation</td>
+                                <td class="p-4 md:p-6 bg-white font-bold text-slate-900 text-center text-[14px] md:text-[15px] leading-relaxed shadow-[0_4px_15px_-5px_rgba(0,0,0,0.05)] border-x border-slate-50 align-middle">Direct execution by Big 4 Partner</td>
+                            </tr>
+                            <tr class="border-b border-amber-600/30">
+                                <td class="p-4 md:p-6 font-bold text-slate-800 tracking-wide text-[13px] md:text-[15px] align-middle">Agility</td>
+                                <td class="p-4 md:p-6 text-slate-500 text-center text-[14px] md:text-[15px] leading-relaxed align-middle">Rigid frameworks & heavy internal approvals</td>
+                                <td class="p-4 md:p-6 bg-white font-bold text-slate-900 text-center text-[14px] md:text-[15px] shadow-[0_10px_20px_-5px_rgba(0,0,0,0.05)] border-x border-slate-50 leading-relaxed align-middle">Swift responses that accelerate<br class="hidden sm:block">management decision-making</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Pricing Logic -->
+            <div class="max-w-3xl mx-auto mt-12 bg-white/60 backdrop-blur-sm px-6 py-10 md:px-12 md:py-14 rounded-lg shadow-[0_10px_30px_-15px_rgba(0,0,0,0.05)] border border-slate-100 text-center">
+                <p class="text-[14px] md:text-[15px] text-slate-700 leading-loose md:leading-[2.2] tracking-wide font-medium">
+                    Through our elite boutique structure, we cut out excessive intermediary costs<br class="hidden md:block">
+                    to deliver professional expertise directly to you.<br>
+                    <br>
+                    By focusing your investment purely on <strong class="font-bold text-amber-600">actual professional time</strong>, we successfully achieve<br class="hidden md:block">
+                    <strong class="font-bold text-amber-600">Big 4 tier quality paired with rational pricing</strong>.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Banner Section -->
+    <section class="bg-slate-900 py-24 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-amber-600 opacity-20 -ml-32 -mt-32 rotate-45 pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 w-48 h-48 bg-slate-700 opacity-20 -mr-24 -mb-24 rotate-45 pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto px-5 md:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-10 lg:mb-12 leading-[1.8] tracking-widest serif">
+                Let us assess your global operations and<br class="hidden md:block">
+                propose the optimal support plan.
+            </h2>
+            <div class="mt-8">
+                <a href="#contact" class="inline-block bg-amber-600 text-white font-bold text-[14px] md:text-base tracking-widest py-5 px-8 md:px-12 rounded-sm shadow-[0_10px_20px_-10px_rgba(217,119,6,0.8)] hover:-translate-y-1 hover:shadow-[0_15px_30px_-10px_rgba(217,119,6,0.9)] hover:bg-amber-500 transition-all duration-300 relative group">
+                    Book a Free Initial Consultation
+                    <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition duration-300 rounded-sm"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white border-t-8 border-amber-600 shadow-2xl p-10 md:p-16 relative">
+                <div class="absolute top-0 right-0 w-32 h-32 navy-bg -mr-16 -mt-16 rotate-45 hidden lg:block"></div>
+                
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold serif mb-4">Contact</h2>
+                    <p class="text-slate-500 text-sm">We provide initial consultations free of charge. Feel free to reach out.</p>
+                </div>
+
+                <form action="https://formspree.io/f/mojppoor" method="POST" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" name="company" placeholder="Company Name" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm">
+                        <input type="text" name="name" placeholder="Your Name" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm" required>
+                    </div>
+                    <input type="email" name="_replyto" placeholder="Email Address" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm" required>
+                    <select name="category" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm text-slate-400">
+                        <option value="">Inquiry Type</option>
+                        <option value="J-SOX">Internal Control / J-SOX</option>
+                        <option value="Subsidiary">Global Subsidiary Management</option>
+                        <option value="CFO">External CFO Services</option>
+                        <option value="M&A">M&A Advisory</option>
+                        <option value="Bookkeeping">Cross-Border Bookkeeping</option>
+                    </select>
+                    <textarea name="message" rows="4" placeholder="Message Details" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm" required></textarea>
+                    
+                    <div class="text-center pt-8">
+                        <button type="submit" class="bg-slate-900 text-white px-16 py-4 rounded-sm font-bold hover:bg-slate-800 transition shadow-lg">Submit Inquiry</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-20 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="w-12 h-12 gold-bg flex items-center justify-center rounded-sm">
+                            <span class="text-white font-bold text-2xl serif italic">L</span>
+                        </div>
+                        <span class="text-2xl font-bold tracking-tight serif">Luare Consulting</span>
+                    </div>
+                    <div class="space-y-4 text-slate-400 text-sm">
+                        <p class="flex items-center space-x-3">
+                            <span class="gold-text">URL</span>
+                            <span>luare-consulting.com</span>
+                        </p>
+                        <p class="flex items-center space-x-3">
+                            <span class="gold-text">MAIL</span>
+                            <span>Y.Lu@Luare-Consulting.com</span>
+                        </p>
+                        <p class="flex items-center space-x-3">
+                            <span class="gold-text">ADD</span>
+                            <span>3F Mutsumi Bldg, 2-10-48 Kitasaiwai, Nishi-ku, Yokohama, Kanagawa, Japan</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:items-end space-y-6">
+                    <div class="flex space-x-6 text-sm">
+                        <a href="#profile" class="hover:text-amber-500 transition">Profile</a>
+                        <a href="#services" class="hover:text-amber-500 transition">Services</a>
+                        <a href="#advantage" class="hover:text-amber-500 transition">Strengths</a>
+                        <a href="#contact" class="hover:text-amber-500 transition">Contact</a>
+                    </div>
+                    <p class="text-[10px] text-slate-500 tracking-widest uppercase">© 2026 Luare Consulting. Professional accounting for global business.</p>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-2 gold-bg opacity-30"></div>
+    </footer>
+
+</body>
+</html>
