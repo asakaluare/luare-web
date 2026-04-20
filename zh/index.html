@@ -51,6 +51,40 @@
             border-top: 8px solid var(--gold);
             position: relative;
         }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 48px;
+            height: 48px;
+            background-color: #001f3f; /* ブランドカラーのネイビー */
+            color: white;
+            border: 1px solid #b38b3c; /* 控えめなゴールドの枠線 */
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 9999;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top.active {
+            opacity: 0.7;
+            visibility: visible;
+        }
+
+        .back-to-top.active:hover {
+            background-color: #b38b3c; /* ホバー時にゴールドへ */
+            opacity: 1;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px rgba(179, 139, 60, 0.3);
+        }
         .hero-border-top::before {
             content: '';
             position: absolute;
@@ -127,7 +161,7 @@
                             <img src="https://flagcdn.com/us.svg" class="w-7 h-7 rounded-full object-cover border border-slate-50 drop-shadow-[0_4px_10px_rgba(0,0,0,0.12)] transition-transform hover:scale-110" alt="English">
                             <img src="https://flagcdn.com/cn.svg" class="w-7 h-7 rounded-full object-cover border border-slate-50 drop-shadow-[0_4px_10px_rgba(0,0,0,0.12)] transition-transform hover:scale-110" alt="China">
                         </div>
-                        <span class="text-[13px] font-bold tracking-[0.2em] text-slate-800 pr-1 mt-0.5">TRILINGUAL</span>
+                        <span class="text-[11px] font-bold tracking-[0.15em] text-slate-800 pr-1 mt-0.5">JP&nbsp;|&nbsp;US&nbsp;|&nbsp;CN &nbsp;TRILINGUAL</span>
                     </div>
                     <span class="text-amber-700 text-lg md:text-xl font-bold tracking-widest border-l-0 md:border-l-2 border-amber-600 pl-0 md:pl-5 py-1 block">匹配四大品质与合理成本。</span>
                 </div>
@@ -221,13 +255,13 @@
                             <div>
                                 <h5 class="font-bold text-slate-900 text-[13px] md:text-[14px] tracking-[0.1em] mb-4 uppercase">教育背景</h5>
                                 <ul class="text-[14px] md:text-[15px] space-y-3 text-slate-800 leading-relaxed font-medium">
-                                    <li class="flex items-start"><span class="mr-3 text-amber-600 font-black">•</span><span>南澳大利亚大学 商学院 毕业</span></li>
+                                    <li class="flex items-start"><span class="mr-3 text-amber-600 font-black">•</span><span>南澳大利亚大学（2023年与阿德莱德大学合并，现更名为阿德莱德大学）管理学院 毕业</span></li>
                                 </ul>
                             </div>
                             <div>
                                 <h5 class="font-bold text-slate-900 text-[13px] md:text-[14px] tracking-[0.1em] mb-4 uppercase">专业资质</h5>
                                 <ul class="text-[14px] md:text-[15px] space-y-3 text-slate-800 leading-relaxed font-medium">
-                                    <li class="flex items-start"><span class="mr-3 text-amber-600 font-black">•</span><span>美国注册会计师颁发执照 (US.CPA)</span></li>
+                                    <li class="flex items-start"><span class="mr-3 text-amber-600 font-black">•</span><span>美国注册会计师 (US.CPA, Inactive, 关岛)</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -386,18 +420,18 @@
                 <form action="https://formspree.io/f/mojppoor" method="POST" class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <input type="text" name="company" placeholder="贵公司名称" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm">
-                        <input type="text" name="name" placeholder="您的姓名" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm" required>
+                        <input type="text" name="name" placeholder="姓名（必填）" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm" required>
                     </div>
-                    <input type="email" name="_replyto" placeholder="电子邮件" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm" required>
-                    <select name="category" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm text-slate-400">
-                        <option value="">咨询意向与类别</option>
-                        <option value="J-SOX">内部控制构建与评估</option>
-                        <option value="Subsidiary">海外分公司管治</option>
-                        <option value="CFO">外聘CFO及财务总监</option>
-                        <option value="M&A">M&A 收并购后合并支援</option>
-                        <option value="Bookkeeping">跨境出纳代理及BPO</option>
+                    <input type="email" name="_replyto" placeholder="电子邮件（必填）" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm" required>
+                    <select name="category" required class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm text-slate-400">
+                        <option value="">请选择咨询内容（必填）</option>
+                        <option value="内部控制与J-SOX合规咨询">内部控制与J-SOX合规咨询</option>
+                        <option value="财务/会计业务流程可视化及决算加速支援">财务/会计业务流程可视化及决算加速支援</option>
+                        <option value="跨境会计与BPO、代任CFO/财务经理服务">跨境会计与BPO、代任CFO/财务经理服务</option>
+                        <option value="M&A咨询">M&A咨询</option>
+                        <option value="其他 / 一般咨询">其他 / 一般咨询</option>
                     </select>
-                    <textarea name="message" rows="4" placeholder="具体烦恼或项目概况" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm" required></textarea>
+                    <textarea name="message" rows="4" placeholder="咨询详情（必填）" class="w-full border-b border-slate-300 py-3 focus:outline-none focus:border-amber-600 bg-transparent text-sm" required></textarea>
                     
                     <div class="text-center pt-8">
                         <button type="submit" class="bg-slate-900 text-white px-16 py-4 rounded-sm font-bold hover:bg-slate-800 transition shadow-lg">提交信息</button>
@@ -429,7 +463,7 @@
                         </p>
                         <p class="flex items-center space-x-3">
                             <span class="gold-text">ADD</span>
-                            <span>日本国 神奈川县横滨市西区北幸二丁目10番48号 Mutsumi 大厦3楼</span>
+                            <span>日本东京都港区滨松町1-27-17 滨松町PR-EX 8F (邮编：105-0013)</span>
                         </p>
                     </div>
                 </div>
@@ -447,5 +481,20 @@
         <div class="absolute bottom-0 left-0 w-full h-2 gold-bg opacity-30"></div>
     </footer>
 
+    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+
+    <script>
+    window.onscroll = function() {
+      const btn = document.getElementById("backToTop");
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    };
+    document.getElementById("backToTop").onclick = function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+    </script>
 </body>
 </html>
