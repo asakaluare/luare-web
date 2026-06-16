@@ -26,6 +26,7 @@ export const metadata: Metadata = {
 };
 
 import ScrollToTop from "@/components/ScrollToTop";
+import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -38,6 +39,18 @@ export default function RootLayout({
       className={`${inter.variable} ${notoSerif.variable} ${notoSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-brand-white text-brand-charcoal font-sans selection:bg-brand-navy selection:text-white">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-39MBNBLCY1"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-39MBNBLCY1');
+          `}
+        </Script>
         {children}
         <ScrollToTop />
       </body>
