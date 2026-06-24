@@ -4,11 +4,11 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "会社概要 | Luare Consulting",
+  title: "Company Profile | Luare Consulting",
   description:
-    "Luare Consulting 代表取締役 陸 沿青（US.CPA）の経歴。KPMG、三菱UFJモルガン・スタンレー証券等を経て、AIエージェントと専門家チームによる次世代型AI経理BPOを提供。",
+    "Profile of Yanqing Lu (US.CPA, Inactive), Managing Partner of Luare Consulting. Providing next-generation AI accounting BPO combining AI agents and expert teams.",
   alternates: {
-    canonical: "https://luare-consulting.com/about",
+    canonical: "https://luare-consulting.com/en/about",
     languages: {
       "x-default": "https://luare-consulting.com/about",
       ja: "https://luare-consulting.com/about",
@@ -18,12 +18,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AboutPage() {
+export default function AboutPageEn() {
   return (
     <>
       <Navbar theme="light" solid={true} />
 
-      <main className="flex-1">
+      <main className="flex-1" lang="en">
         {/* ══════════════════════════════════════════════════════════════
             HERO SECTION
            ══════════════════════════════════════════════════════════════ */}
@@ -45,7 +45,7 @@ export default function AboutPage() {
               className="inline-block text-[10px] font-bold uppercase tracking-[0.5em] mb-6"
               style={{ color: "#C5A059" }}
             >
-              会社概要・代表略歴
+              Company Profile & Representative Biography
             </span>
 
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium tracking-wider text-brand-platinum leading-tight">
@@ -79,7 +79,7 @@ export default function AboutPage() {
                   <div className="relative overflow-hidden rounded-sm shadow-2xl">
                     <Image
                       src="/images/Photo.png"
-                      alt="陸 沿青 — 代表取締役 / Managing Partner"
+                      alt="Yanqing Lu — Managing Partner"
                       width={560}
                       height={700}
                       className="w-full h-auto object-cover"
@@ -90,10 +90,10 @@ export default function AboutPage() {
                     {/* Bottom gradient overlay with name */}
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent px-6 pt-20 pb-6">
                       <h2 className="font-serif text-2xl sm:text-3xl font-medium text-brand-platinum tracking-wider">
-                        陸 沿青
+                        Yanqing Lu
                       </h2>
                       <span className="text-xs font-medium tracking-[0.15em] text-brand-silver/80 mt-1 block">
-                        Yanqing Lu
+                        US.CPA (Inactive)
                       </span>
                     </div>
                   </div>
@@ -108,7 +108,7 @@ export default function AboutPage() {
                       className="text-[11px] font-bold uppercase tracking-[0.25em]"
                       style={{ color: "#C5A059" }}
                     >
-                      代表取締役 / Managing Partner
+                      Managing Partner
                     </span>
                   </div>
                 </div>
@@ -122,22 +122,24 @@ export default function AboutPage() {
                     {/* Qualification */}
                     <div className="border-l-2 pl-5" style={{ borderColor: "#C5A059" }}>
                       <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-brand-slate/50 block mb-2">
-                        保有資格
+                        Qualifications
                       </span>
                       <p className="text-sm font-medium text-brand-charcoal leading-relaxed">
-                        米国公認会計士（USCPA, Inactive, グアム州）
+                        US Certified Public Accountant
+                        <br />
+                        (USCPA, Inactive, Guam)
                       </p>
                     </div>
 
                     {/* Education */}
                     <div className="border-l-2 pl-5" style={{ borderColor: "#C5A059" }}>
                       <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-brand-slate/50 block mb-2">
-                        学歴
+                        Education
                       </span>
                       <p className="text-sm font-medium text-brand-charcoal leading-relaxed">
-                        南オーストラリア大学（現：アデレード大学）
+                        University of South Australia
                         <br />
-                        経営学部 卒業
+                        Bachelor of Business
                       </p>
                     </div>
                   </div>
@@ -158,11 +160,10 @@ export default function AboutPage() {
                     </h3>
                   </div>
                   <p className="text-sm sm:text-[15px] text-brand-slate leading-[1.9] tracking-wide">
-                    オーストラリアにて経営学士号を取得後、日系上場専門商社および米国系製造大手の日本法人にてグローバル経理実務を経験。その後、KPMGあずさ監査法人にて会計アドバイザリー業務に従事し、数々の多国籍企業の内部統制・財務基盤構築を支援。
+                    After earning a Bachelor of Business in Australia, Yanqing gained global accounting experience at a listed Japanese trading company and the Japanese subsidiary of a major US manufacturing firm. Subsequently, at KPMG AZSA LLC, he engaged in accounting advisory services, supporting numerous multinational corporations in building internal controls and financial infrastructures.
                   </p>
                   <p className="text-sm sm:text-[15px] text-brand-slate leading-[1.9] tracking-wide mt-4">
-                    さらに、三菱UFJモルガン・スタンレー証券の投資銀行部門、米国系ベンチャー会計事務所を経て独立、Luare
-                    Consultingを設立。
+                    Following his tenure in the investment banking division of Mitsubishi UFJ Morgan Stanley Securities and a US-affiliated venture accounting firm, he founded Luare Consulting.
                   </p>
                 </div>
 
@@ -186,14 +187,14 @@ export default function AboutPage() {
                     style={{ borderColor: "#C5A059" }}
                   >
                     <p className="font-serif text-lg sm:text-xl font-medium text-brand-charcoal leading-relaxed tracking-wide">
-                      「見えない経理リスク」から、
+                      A partner freeing executives from
                       <br />
-                      経営者を解放するパートナーへ。
+                      &quot;unseen accounting risks&quot;.
                     </p>
                   </blockquote>
 
                   <p className="text-sm sm:text-[15px] text-brand-slate leading-[1.9] tracking-wide">
-                    採用難や退職による体制崩壊リスクなど、経理部門が抱える慢性的な課題。私たちは、グローバル基準のプロの伴走とテクノロジーの力でこれらの不安を根本から取り除き、経営の意思決定を加速させるクリアな財務オペレーションを構築します。
+                    Chronic challenges such as hiring difficulties and the risk of system collapse due to turnover plague accounting departments. By combining global-standard professional support with the power of technology, we fundamentally eliminate these uncertainties and build clear financial operations that accelerate management decision-making.
                   </p>
                 </div>
               </div>
@@ -227,33 +228,33 @@ export default function AboutPage() {
                 {[
                   {
                     label: "Education",
-                    title: "南オーストラリア大学 経営学部",
-                    desc: "オーストラリアにて経営学士号を取得",
+                    title: "University of South Australia",
+                    desc: "Earned a Bachelor of Business in Australia",
                   },
                   {
                     label: "Global Accounting",
-                    title: "日系上場専門商社 / 米国系製造大手",
-                    desc: "グローバル経理実務を経験",
+                    title: "Listed Japanese Trading Co. / Major US Manufacturer",
+                    desc: "Experienced in global accounting operations",
                   },
                   {
                     label: "Big 4 Advisory",
-                    title: "KPMGあずさ監査法人",
-                    desc: "会計アドバイザリー業務、多国籍企業の内部統制・財務基盤構築を支援",
+                    title: "KPMG AZSA LLC",
+                    desc: "Provided accounting advisory, supporting multinational companies in building internal controls and financial foundations",
                   },
                   {
                     label: "Investment Banking",
-                    title: "三菱UFJモルガン・スタンレー証券",
-                    desc: "投資銀行部門にてM＆Aアドバイザリーに従事",
+                    title: "Mitsubishi UFJ Morgan Stanley Securities",
+                    desc: "Engaged in M&A advisory in the Investment Banking Division",
                   },
                   {
                     label: "Venture / US CPA",
-                    title: "米国系ベンチャー会計事務所",
-                    desc: "USCPA資格取得、スタートアップ・中小企業の財務支援",
+                    title: "US-affiliated Venture Accounting Firm",
+                    desc: "Obtained USCPA license; supported finance for startups and SMEs",
                   },
                   {
                     label: "Founder",
-                    title: "株式会社 Luare Consulting 設立",
-                    desc: "経理財務コンサルティング＆AIエージェントファーム設立",
+                    title: "Founded Luare Consulting Co., Ltd.",
+                    desc: "Established an accounting/finance consulting & AI agent firm",
                   },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-6 group">
@@ -310,20 +311,20 @@ export default function AboutPage() {
             <div className="border-t border-slate-200">
               <dl className="divide-y divide-slate-100">
                 <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                  <dt className="text-xs font-bold uppercase tracking-wider text-brand-slate/70">会社名</dt>
-                  <dd className="mt-1 text-sm font-medium text-brand-charcoal sm:col-span-2 sm:mt-0">株式会社Luare Consulting</dd>
+                  <dt className="text-xs font-bold uppercase tracking-wider text-brand-slate/70">Company Name</dt>
+                  <dd className="mt-1 text-sm font-medium text-brand-charcoal sm:col-span-2 sm:mt-0">Luare Consulting Co., Ltd.</dd>
                 </div>
                 <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                  <dt className="text-xs font-bold uppercase tracking-wider text-brand-slate/70">事業内容</dt>
-                  <dd className="mt-1 text-sm font-medium text-brand-charcoal sm:col-span-2 sm:mt-0">Accounting & Finance BPO / 会計コンサルティングサービス</dd>
+                  <dt className="text-xs font-bold uppercase tracking-wider text-brand-slate/70">Business Description</dt>
+                  <dd className="mt-1 text-sm font-medium text-brand-charcoal sm:col-span-2 sm:mt-0">Accounting & Finance BPO / Accounting Consulting Services</dd>
                 </div>
                 <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                  <dt className="text-xs font-bold uppercase tracking-wider text-brand-slate/70">対応言語</dt>
-                  <dd className="mt-1 text-sm font-medium text-brand-charcoal sm:col-span-2 sm:mt-0">日本語 / 英語 / 中国語</dd>
+                  <dt className="text-xs font-bold uppercase tracking-wider text-brand-slate/70">Supported Languages</dt>
+                  <dd className="mt-1 text-sm font-medium text-brand-charcoal sm:col-span-2 sm:mt-0">Japanese / English / Chinese</dd>
                 </div>
                 <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                  <dt className="text-xs font-bold uppercase tracking-wider text-brand-slate/70">代表</dt>
-                  <dd className="mt-1 text-sm font-medium text-brand-charcoal sm:col-span-2 sm:mt-0">陸 沿青 (US.CPA)</dd>
+                  <dt className="text-xs font-bold uppercase tracking-wider text-brand-slate/70">Representative</dt>
+                  <dd className="mt-1 text-sm font-medium text-brand-charcoal sm:col-span-2 sm:mt-0">Yanqing Lu (US.CPA, Inactive)</dd>
                 </div>
               </dl>
             </div>
@@ -343,14 +344,14 @@ export default function AboutPage() {
           <div className="mx-auto max-w-4xl px-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-8">
             <div>
               <h3 className="font-serif text-lg sm:text-xl font-medium text-brand-platinum tracking-wider mb-2">
-                ご相談・お問い合わせ
+                Consultation & Inquiries
               </h3>
               <p className="text-xs text-brand-silver/70 tracking-wider">
-                グローバル財務に関するあらゆるご相談を承ります。
+                We welcome all inquiries regarding global finance.
               </p>
             </div>
             <Link
-              href="/contact"
+              href="/en/contact"
               className="inline-flex items-center justify-center border px-8 py-3 text-[10px] font-bold uppercase tracking-[0.25em] transition-all duration-300"
               style={{
                 borderColor: "#C5A059",

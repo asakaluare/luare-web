@@ -70,6 +70,30 @@ export default function Navbar({ theme = "dark", solid = false }: NavbarProps) {
 
   const hamburgerIconColor = theme === "light" ? "text-brand-platinum" : "text-brand-navy";
 
+  // Texts
+  const aboutText = currentLang === "ZH" ? "代表简介 / 关于我们" : currentLang === "EN" ? "Representative Profile / About" : "About Us";
+  const contactText = currentLang === "ZH" ? "联系我们" : "Contact";
+
+  // Links
+  const servicesLink = currentLang === "ZH" ? "/zh/#services" : currentLang === "EN" ? "/en/#services" : "/#gateway";
+  const insightsLink = currentLang === "ZH" ? "/zh/insights" : currentLang === "EN" ? "/en/insights" : "/insights";
+  const aboutLink = currentLang === "ZH" ? "/zh/about" : currentLang === "EN" ? "/en/about" : "/about";
+  const contactLink = currentLang === "ZH" ? "/zh/contact" : currentLang === "EN" ? "/en/contact" : "/contact";
+
+  // Language URL generator
+  const getLangUrl = (targetLang: "JP" | "EN" | "ZH") => {
+    let baseRoute = pathname;
+    if (baseRoute.startsWith("/en")) baseRoute = baseRoute.replace("/en", "");
+    else if (baseRoute.startsWith("/zh")) baseRoute = baseRoute.replace("/zh", "");
+    
+    if (baseRoute === "") baseRoute = "/";
+
+    if (targetLang === "JP") return baseRoute;
+    if (targetLang === "EN") return baseRoute === "/" ? "/en" : `/en${baseRoute}`;
+    if (targetLang === "ZH") return baseRoute === "/" ? "/zh" : `/zh${baseRoute}`;
+    return "/";
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b ${headerBg}`}
@@ -90,21 +114,21 @@ export default function Navbar({ theme = "dark", solid = false }: NavbarProps) {
         <div className="hidden md:flex items-center gap-6 lg:gap-10">
           {/* Desktop Navigation */}
           <nav className="flex items-center gap-6 lg:gap-10">
-            <Link href="/#gateway" className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors ${linkColor}`}>
+            <Link href={servicesLink} className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors ${linkColor}`}>
               Services
             </Link>
-            <Link href="/insights" className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors ${linkColor}`}>
+            <Link href={insightsLink} className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors ${linkColor}`}>
               Insights
             </Link>
-            <Link href="/about" className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors ${linkColor}`}>
-              About Us
+            <Link href={aboutLink} className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors ${linkColor}`}>
+              {aboutText}
             </Link>
           </nav>
 
           {/* Lang Selector */}
           <div className={`flex items-center border rounded-none overflow-hidden p-0.5 transition-colors ${toggleContainerBg}`}>
             <Link
-              href="/"
+              href={getLangUrl("JP")}
               className={`px-3 py-1 text-[10px] font-semibold tracking-wider transition-all rounded-none cursor-pointer ${
                 currentLang === "JP" ? toggleBtnActive : toggleBtnInactive
               }`}
@@ -112,29 +136,29 @@ export default function Navbar({ theme = "dark", solid = false }: NavbarProps) {
               JP
             </Link>
             <Link
-              href="/en"
+              href={getLangUrl("EN")}
               className={`px-3 py-1 text-[10px] font-semibold tracking-wider transition-all rounded-none cursor-pointer ${
                 currentLang === "EN" ? toggleBtnActive : toggleBtnInactive
               }`}
             >
               EN
             </Link>
-            <button
-              onClick={() => {}}
+            <Link
+              href={getLangUrl("ZH")}
               className={`px-3 py-1 text-[10px] font-semibold tracking-wider transition-all rounded-none cursor-pointer ${
                 currentLang === "ZH" ? toggleBtnActive : toggleBtnInactive
               }`}
             >
               ZH
-            </button>
+            </Link>
           </div>
 
           {/* Contact Button */}
           <Link
-            href="/contact"
+            href={contactLink}
             className={`inline-flex items-center justify-center border px-5 py-2 text-[10px] font-bold uppercase tracking-[0.25em] transition-all duration-300 ${contactBtnStyle}`}
           >
-            Contact
+            {contactText}
           </Link>
         </div>
 
@@ -143,7 +167,7 @@ export default function Navbar({ theme = "dark", solid = false }: NavbarProps) {
           {/* Lang Selector (Small) */}
           <div className={`flex items-center border rounded-none overflow-hidden p-0.5 transition-colors ${toggleContainerBg}`}>
             <Link
-              href="/"
+              href={getLangUrl("JP")}
               className={`px-2 py-0.5 text-[9px] font-semibold tracking-wider transition-all rounded-none cursor-pointer ${
                 currentLang === "JP" ? toggleBtnActive : toggleBtnInactive
               }`}
@@ -151,21 +175,21 @@ export default function Navbar({ theme = "dark", solid = false }: NavbarProps) {
               JP
             </Link>
             <Link
-              href="/en"
+              href={getLangUrl("EN")}
               className={`px-2 py-0.5 text-[9px] font-semibold tracking-wider transition-all rounded-none cursor-pointer ${
                 currentLang === "EN" ? toggleBtnActive : toggleBtnInactive
               }`}
             >
               EN
             </Link>
-            <button
-              onClick={() => {}}
+            <Link
+              href={getLangUrl("ZH")}
               className={`px-2 py-0.5 text-[9px] font-semibold tracking-wider transition-all rounded-none cursor-pointer ${
                 currentLang === "ZH" ? toggleBtnActive : toggleBtnInactive
               }`}
             >
               ZH
-            </button>
+            </Link>
           </div>
 
           {/* Hamburger Menu Button */}
@@ -195,35 +219,35 @@ export default function Navbar({ theme = "dark", solid = false }: NavbarProps) {
         <div className="md:hidden fixed inset-x-0 top-20 bottom-0 bg-brand-navy z-40 flex flex-col justify-between px-6 py-8 border-t border-brand-silver/10 overflow-y-auto animate-in fade-in slide-in-from-top-4 duration-300">
           <nav className="flex flex-col gap-6 text-left">
             <Link
-              href="/#gateway"
+              href={servicesLink}
               onClick={() => setIsMenuOpen(false)}
               className="text-sm font-semibold tracking-[0.2em] text-brand-silver hover:text-brand-platinum transition-colors py-2 border-b border-white/5 uppercase"
             >
               Services
             </Link>
             <Link
-              href="/insights"
+              href={insightsLink}
               onClick={() => setIsMenuOpen(false)}
               className="text-sm font-semibold tracking-[0.2em] text-brand-silver hover:text-brand-platinum transition-colors py-2 border-b border-white/5 uppercase"
             >
               Insights
             </Link>
             <Link
-              href="/about"
+              href={aboutLink}
               onClick={() => setIsMenuOpen(false)}
               className="text-sm font-semibold tracking-[0.2em] text-brand-silver hover:text-brand-platinum transition-colors py-2 border-b border-white/5 uppercase"
             >
-              About Us
+              {aboutText}
             </Link>
           </nav>
 
           <div className="flex flex-col gap-4 mt-8">
             <Link
-              href="/contact"
+              href={contactLink}
               onClick={() => setIsMenuOpen(false)}
               className="w-full inline-flex items-center justify-center border border-brand-gold text-brand-gold bg-transparent hover:bg-brand-gold hover:text-brand-navy py-4 text-xs font-bold uppercase tracking-[0.25em] transition-all duration-300 rounded-sm"
             >
-              Contact Us
+              {contactText}
             </Link>
           </div>
         </div>
