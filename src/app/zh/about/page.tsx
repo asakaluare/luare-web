@@ -237,9 +237,9 @@ export default function AboutPageZh() {
                     desc: "积累了丰富的全球财务会计实务经验",
                   },
                   {
-                    label: "Big 4 Advisory",
+                    label: "Big 4 Advisory / US CPA",
                     title: "毕马威（KPMG）Azsa审计法人",
-                    desc: "从事会计咨询业务，协助多家跨国企业构建内部控制及财务基础架构",
+                    desc: "取得USCPA资格，从事会计咨询业务，协助多家跨国企业构建内部控制及财务基础架构",
                   },
                   {
                     label: "Investment Banking",
@@ -247,9 +247,9 @@ export default function AboutPageZh() {
                     desc: "在投资银行部从事并购（M&A）咨询业务",
                   },
                   {
-                    label: "Venture / US CPA",
+                    label: "Venture",
                     title: "美资创投会计师事务所",
-                    desc: "取得USCPA资格，为初创企业及中小企业提供财务支持",
+                    desc: "从事全面财务咨询服务（审计、内部控制构建支持、财务外包、并购等）",
                   },
                   {
                     label: "Founder",

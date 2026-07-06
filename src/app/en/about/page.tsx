@@ -237,9 +237,9 @@ export default function AboutPageEn() {
                     desc: "Experienced in global accounting operations",
                   },
                   {
-                    label: "Big 4 Advisory",
+                    label: "Big 4 Advisory / US CPA",
                     title: "KPMG AZSA LLC",
-                    desc: "Provided accounting advisory, supporting multinational companies in building internal controls and financial foundations",
+                    desc: "Obtained USCPA license; provided accounting advisory, supporting multinational companies in building internal controls and financial foundations",
                   },
                   {
                     label: "Investment Banking",
@@ -247,9 +247,9 @@ export default function AboutPageEn() {
                     desc: "Engaged in M&A advisory in the Investment Banking Division",
                   },
                   {
-                    label: "Venture / US CPA",
+                    label: "Venture",
                     title: "US-affiliated Venture Accounting Firm",
-                    desc: "Obtained USCPA license; supported finance for startups and SMEs",
+                    desc: "Engaged in general accounting consulting services (audit, internal control construction support, accounting outsourcing, M&A, etc.)",
                   },
                   {
                     label: "Founder",

@@ -236,9 +236,9 @@ export default function AboutPage() {
                     desc: "グローバル経理実務を経験",
                   },
                   {
-                    label: "Big 4 Advisory",
+                    label: "Big 4 Advisory / US CPA",
                     title: "KPMGあずさ監査法人",
-                    desc: "会計アドバイザリー業務、多国籍企業の内部統制・財務基盤構築を支援",
+                    desc: "USCPA資格取得、会計アドバイザリー業務、多国籍企業の内部統制・財務基盤構築を支援",
                   },
                   {
                     label: "Investment Banking",
@@ -246,9 +246,9 @@ export default function AboutPage() {
                     desc: "投資銀行部門にてM＆Aアドバイザリーに従事",
                   },
                   {
-                    label: "Venture / US CPA",
+                    label: "Venture",
                     title: "米国系ベンチャー会計事務所",
-                    desc: "USCPA資格取得、スタートアップ・中小企業の財務支援",
+                    desc: "会計コンサルティング業務全般に従事(監査、内部統制構築支援、経理アウトソーシング、M&Aなど)",
                   },
                   {
                     label: "Founder",
